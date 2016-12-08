@@ -1,0 +1,9 @@
+<h2>Attraction Show Page</h2>
+
+<form action="/rides/new" method="post">
+  <%= tag(:input, :type => "hidden", :name => :user_id, :value => session[:user_id]) %>
+  <%= tag(:input, :type => "hidden", :name => :attraction_id, :value => @attraction.id) %>
+
+  <input type="submit" value="Go on this ride">
+</form>
+

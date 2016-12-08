@@ -1,0 +1,11 @@
+<h2>Attractions index page</h2>
+
+<% @attractions.each do |attraction| %>
+  <p><%= attraction.name %></p>
+  <p><%= attraction.nausea_rating %></p>
+  <p><%= attraction.happiness_rating %></p>
+  <p><%= attraction.min_height %></p>
+
+  <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+<% end %>
+

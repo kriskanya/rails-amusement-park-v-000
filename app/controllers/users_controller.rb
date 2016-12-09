@@ -16,8 +16,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    puts session[:user_id]
-
     if session[:user_id]
       @user = User.find(params[:id])
     else

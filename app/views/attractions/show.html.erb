@@ -1,4 +1,8 @@
-<h2>Attraction Show Page</h2>
+<h2>Show <%= @attraction.name %></h2>
+
+<% if @user.admin %>
+  <%= link_to "Edit Attraction", edit_attraction_path(@attraction) %>
+<% end %>
 
 <form action="/rides/new" method="post">
   <%= tag(:input, :type => "hidden", :name => :user_id, :value => session[:user_id]) %>
